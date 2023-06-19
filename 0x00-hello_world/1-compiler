@@ -1,13 +1,2 @@
 #!/bin/bash
-
-cfile=$1
-
-if [ ! -f "$cfile" ]; then
-  echo "Error: C file '$cfile' does not exist"
-  exit 1
-fi
-
-ofile=${cfile%.c}.o
-
-gcc -c -o "$ofile" "$cfile"
-
+gcc -c -o "$1.o" "$1"
